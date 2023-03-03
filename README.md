@@ -2,6 +2,8 @@
 [![codecov](https://codecov.io/gh/openSUSE/openSUSE-release-tools/branch/master/graph/badge.svg?token=MqVygxmguE)](https://codecov.io/gh/openSUSE/openSUSE-release-tools)
 [![openSUSE Tumbleweed package](https://repology.org/badge/version-for-repo/opensuse_tumbleweed/opensuse-release-tools.svg)](https://repology.org/metapackage/opensuse-release-tools)
 
+DO NOT MERGE
+
 # openSUSE-release-tools
 
 This repository contains a set of tools to aid in the process of building, testing and releasing

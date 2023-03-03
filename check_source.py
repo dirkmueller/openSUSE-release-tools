@@ -224,6 +224,12 @@ class CheckSource(ReviewBot.ReviewBot):
         expected_name = target_package
         if filename == '_preinstallimage':
             expected_name = 'preinstallimage'
+            if not target_package.startswith('preinstallimage-'):
+                shutil.rmtree(dir)
+                self.review_messages['declined'] = "A preinstall package has to submitted as package name with preinstallimage- got %s" % (
+                    target_package)
+                return False
+
         if not (filename.endswith('.kiwi') or filename == 'Dockerfile') and new_info['name'] != expected_name:
             shutil.rmtree(dir)
             self.review_messages['declined'] = "A package submitted as %s has to build as 'Name: %s' - found Name '%s'" % (
